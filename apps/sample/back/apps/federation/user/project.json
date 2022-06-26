@@ -4,13 +4,18 @@
   "projectType": "application",
   "targets": {
     "build": {
+      "dependsOn": ["^build"],
       "executor": "@nrwl/node:webpack",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/apps/sample/back/apps/federation/user",
+        "outputPath": "apps/sample/back/apps/federation/user/dist",
         "main": "apps/sample/back/apps/federation/user/src/main.ts",
-        "tsConfig": "apps/sample/back/apps/federation/user/tsconfig.app.json",
-        "assets": ["apps/sample/back/apps/federation/user/src/assets"]
+        "tsConfig": "apps/sample/back/apps/federation/user/tsconfig.json",
+        "assets": ["apps/sample/back/apps/federation/user/src/assets"],
+        "generatePackageJson": true,
+        "options": {
+          "script": "yarn start"
+        }
       },
       "configurations": {
         "production": {
