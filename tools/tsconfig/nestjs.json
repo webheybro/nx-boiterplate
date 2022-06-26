@@ -4,9 +4,10 @@
   "extends": "./base.json",
   "compilerOptions": {
     "module": "commonjs",
+    "composite": true,
     "removeComments": true,
     "allowSyntheticDefaultImports": true,
-    "target": "es2017",
+    "target": "es2019",
     "sourceMap": true,
     "incremental": true,
     "strictNullChecks": false,

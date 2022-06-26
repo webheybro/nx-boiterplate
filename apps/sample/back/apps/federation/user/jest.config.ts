@@ -1,5 +1,5 @@
-/* eslint-disable */
-export default {
+/* eslint-disable @typescript-eslint/naming-convention */
+const JEST_CONFIG = {
   displayName: 'sample-back-apps-federation-user',
   preset: '../../../../../../jest.preset.js',
   globals: {
@@ -14,3 +14,4 @@ export default {
   moduleFileExtensions: ['ts', 'js', 'html'],
   coverageDirectory: '../../../../../../coverage/apps/sample/back/apps/federation/user',
 };
+export default JEST_CONFIG;

@@ -1,17 +1,9 @@
 {
   "extends": "../../../../../../tools/tsconfig/nestjs.json",
-  "files": [],
-  "include": [],
   "compilerOptions": {
-    "baseUrl": "./",
-    "outDir": "./dist"
+    "outDir": "./dist",
+    "baseUrl": "./"
   },
-  "references": [
-    {
-      "path": "./tsconfig.app.json"
-    },
-    {
-      "path": "./tsconfig.spec.json"
-    }
-  ]
+  "include": ["**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"]
 }
