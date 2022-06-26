@@ -2,6 +2,10 @@
   "extends": "../../../../../../tools/tsconfig/nestjs.json",
   "files": [],
   "include": [],
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./dist"
+  },
   "references": [
     {
       "path": "./tsconfig.app.json"
