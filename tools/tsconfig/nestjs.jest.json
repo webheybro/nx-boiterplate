@@ -1,0 +1,12 @@
+{
+  "extends": "./base.json",
+  "compilerOptions": {
+    "noImplicitOverride": false,
+    "noUnusedLocals": false,
+    "noImplicitThis": false,
+    "noFallthroughCasesInSwitch": false,
+    "strict": false,
+    "allowUnreachableCode": true,
+    "experimentalDecorators": true
+  }
+}

@@ -23,5 +23,6 @@
     "build": {
       "dependsOn": ["^build"]
     }
-  }
+  },
+  "defaultProject": "sample-back-apps-federation-user"
 }
