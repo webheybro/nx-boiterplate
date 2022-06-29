@@ -1,5 +1,5 @@
 {
-  "extends": "../../../../../../tools/tsconfig/nestjs.json",
+  "extends": "../../../../../tools/tsconfig/nestjs.json",
   "compilerOptions": {
     "outDir": "./dist",
     "baseUrl": "./"

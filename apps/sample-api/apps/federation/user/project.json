@@ -1,6 +1,6 @@
 {
-  "$schema": "../../../../../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/sample/back/apps/federation/user/src",
+  "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/sample-api/apps/federation/user/src",
   "projectType": "application",
   "targets": {
     "build": {
@@ -8,10 +8,10 @@
       "executor": "@nrwl/node:webpack",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "apps/sample/back/apps/federation/user/dist",
-        "main": "apps/sample/back/apps/federation/user/src/main.ts",
-        "tsConfig": "apps/sample/back/apps/federation/user/tsconfig.json",
-        "assets": ["apps/sample/back/apps/federation/user/src/assets"],
+        "outputPath": "apps/sample-api/apps/federation/user/dist",
+        "main": "apps/sample-api/apps/federation/user/src/main.ts",
+        "tsConfig": "apps/sample-api/apps/federation/user/tsconfig.json",
+        "assets": ["apps/sample-api/apps/federation/user/src/assets"],
         "generatePackageJson": true,
         "options": {
           "script": "yarn start"
@@ -24,8 +24,8 @@
           "inspect": false,
           "fileReplacements": [
             {
-              "replace": "apps/sample/back/apps/federation/user/src/environments/environment.ts",
-              "with": "apps/sample/back/apps/federation/user/src/environments/environment.prod.ts"
+              "replace": "apps/sample-api/apps/federation/user/src/environments/environment.ts",
+              "with": "apps/sample-api/apps/federation/user/src/environments/environment.prod.ts"
             }
           ]
         }
@@ -34,21 +34,21 @@
     "serve": {
       "executor": "@nrwl/node:node",
       "options": {
-        "buildTarget": "sample-back-apps-federation-user:build"
+        "buildTarget": "sample-api-apps-federation-user:build"
       }
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/sample/back/apps/federation/user/**/*.ts"]
+        "lintFilePatterns": ["apps/sample-api/apps/federation/user/**/*.ts"]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/sample/back/apps/federation/user"],
+      "outputs": ["coverage/apps/sample-api/apps/federation/user"],
       "options": {
-        "jestConfig": "apps/sample/back/apps/federation/user/jest.config.ts",
+        "jestConfig": "apps/sample-api/apps/federation/user/jest.config.ts",
         "passWithNoTests": true
       }
     }
