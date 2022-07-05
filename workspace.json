@@ -2,6 +2,8 @@
   "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
   "projects": {
+    "-sample-api-apps-federation-client": "apps/sample-api/apps/federation/client",
+    "-sample-api-apps-federation-other": "apps/sample-api/apps/federation/other",
     "sample-api-apps-federation-user": "apps/sample-api/apps/federation/user"
   }
 }

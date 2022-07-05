@@ -1,0 +1,62 @@
+{
+  "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/sample-api/apps/federation/client/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/node:webpack",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/apps/sample-api/apps/federation/client",
+        "main": "apps/sample-api/apps/federation/client/src/main.ts",
+        "tsConfig": "apps/sample-api/apps/federation/client/tsconfig.app.json",
+        "assets": [
+          "apps/sample-api/apps/federation/client/src/assets"
+        ]
+      },
+      "configurations": {
+        "production": {
+          "optimization": true,
+          "extractLicenses": true,
+          "inspect": false,
+          "fileReplacements": [
+            {
+              "replace": "apps/sample-api/apps/federation/client/src/environments/environment.ts",
+              "with": "apps/sample-api/apps/federation/client/src/environments/environment.prod.ts"
+            }
+          ]
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/node:node",
+      "options": {
+        "buildTarget": "-sample-api-apps-federation-client:build"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "apps/sample-api/apps/federation/client/**/*.ts"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": [
+        "coverage/apps/sample-api/apps/federation/client"
+      ],
+      "options": {
+        "jestConfig": "apps/sample-api/apps/federation/client/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}
